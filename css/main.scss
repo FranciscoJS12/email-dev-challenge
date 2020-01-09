@@ -1,0 +1,202 @@
+// Import Variables and Utilities
+@import 'config';
+
+// Section Styles:
+
+// Navbar
+header {
+  background-color: #000;
+  .container {
+    label {display: none;}
+    #toggle {display: none;}
+
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+
+    img {
+      display: inline-block;
+      width: 70px;
+    }
+
+    nav {
+      color: #fff;
+      ul {
+        display: flex;
+      }
+      a {
+        font-size: 0.9rem;
+        padding: 10px;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+  }
+}
+
+// Main
+main {
+  // height: 90vh;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: url(../img/undraw_opened_gi4n.svg) no-repeat center center/cover;
+  
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+  p.subtitle {
+    font-size: 1.75rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .card {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #fff ;
+      min-height: 350px;
+
+      h3 {
+        padding: 1rem;
+      }
+
+      p.info {
+        padding: 1rem;
+        line-height: 1.5;
+      }
+
+      .price {
+        font-size: 2rem;
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      &:first-child {
+        border: $borderPrimary;
+        h3 {
+          border-bottom: $borderPrimary;
+        }
+        .btn {
+          background-color: $colorPrimary;
+          color: #fff;
+        }
+        .btn:hover {
+          filter: brightness(1.2);
+        }
+      }
+      &:last-child {
+        border: $borderSecondary;
+        h3 {
+          border-bottom: $borderSecondary;
+        }
+        .btn:hover {
+          background-color: $colorSecondary;
+        }
+      }
+    }
+  }
+}
+
+// Course Details
+#course-details {
+  .container {
+    text-align: center;
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .col {
+          line-height: 1.5;
+          padding: 0 1rem;
+          padding-bottom: 1.5rem;
+
+          h3 {
+            border-bottom: $borderSecondary;
+          }
+          ul {
+            text-align: left;
+            li {
+              padding: 0.5rem 0;
+            }
+          }
+
+          .ul-nested {
+            list-style-type: disc;
+            list-style-position: inside;
+            li {
+              padding-left: 0.5rem;
+            }
+          }
+        }
+
+      }
+
+      .footnote {
+        text-align: justify;
+        span {font-weight: 800;}
+        padding: 0 1rem;
+        line-height: 1.5;
+      }
+  }
+}
+
+// Instructor Info
+#instructor {
+  background-color: #f3f3f3;
+
+  .container {
+    h2 {
+      text-align: center;
+    }
+
+    .instructor {
+      line-height: 2;
+      text-align: justify;
+      display: flex;
+      // align-items: center;
+
+      p {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+// FAQ
+#faq {
+  .container {
+    h2 {
+      text-align: center;
+    }
+    li {
+      // border-bottom: $borderPrimary;
+      line-height: 2;
+      padding: 1rem 0;
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+  padding: 2rem 0;
+}
+
+// Media Queries
+@import 'media';
